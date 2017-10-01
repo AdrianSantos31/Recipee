@@ -26,6 +26,8 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     }
     
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recipeNameTextField.delegate = self
@@ -126,13 +128,5 @@ extension AddRecipeViewController{
             let selectedCookingTime = cookingTimePickerViewController.selectedCookingTime{
             cookTime = selectedCookingTime
         }
-    }
-}
-
-extension AddRecipeViewController{
-    @IBAction func cancelToSecondViewController(_ segue: UIStoryboardSegue) {
-    }
-    
-    @IBAction func saveRecipeDetail(_ segue: UIStoryboardSegue) {
     }
 }

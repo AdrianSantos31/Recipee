@@ -17,7 +17,21 @@ class Recipe {
     
     init?(photo: UIImage?, name: String, length: String, instructions: String){
         //Initialization should fail if there is no name, length nor instructions
+        /*
         if name.isEmpty ||  length.isEmpty || instructions.isEmpty{
+            return nil
+        }
+        */
+        
+        guard !name.isEmpty else{
+            return nil
+        }
+        
+        guard !length.isEmpty else{
+            return nil
+        }
+        
+        guard !instructions.isEmpty else{
             return nil
         }
         
