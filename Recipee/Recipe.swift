@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import os.log
 
-class Recipe {
+class Recipe: NSObject, NSCoding {
     //MARK: Properties
     var photo: UIImage?
     var name: String
@@ -41,6 +42,42 @@ class Recipe {
         self.length = length
         self.instructions = instructions
         
+    }
+    
+    //MARK: Archiving Paths
+    static var DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendPathComponent("recipes")
+    
+    //MARK: Types
+    struct PropertyKey{
+        static let photo = "photo"
+        static let name = "name"
+        static let length = "length"
+        static let instructions = "instructions"
+    }
+    
+    //MARK: NSCoding
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(photo, forKey: PropertyKey.photo)
+        aCoder.encode(name, forKey: PropertyKey.name)
+        aCoder.encode(length, forKey: PropertyKey.length)
+        aCoder.encode(instructions, forKey: PropertyKey.instructions)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder){
+        guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String
+            else{
+                os_log("Unable to decode the name for a Meal object", log: OSLog.default, type: .debug)
+                return nil
+        }
+        
+        //Since photo is optional, we can use a conditional cast
+        let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
+        let length = aDecoder.decodeObject(forKey: PropertyKey.length) as? String
+        let instructions = aDecoder.decodeObject(forKey: PropertyKey.instructions) as? String
+        
+        //Must call designated initializer
+        self.init(photo:photo, name:name, length:length!, instructions:instructions!)
     }
     
 }

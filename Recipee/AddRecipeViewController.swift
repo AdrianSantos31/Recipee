@@ -27,7 +27,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         }
     }
     
-    /* This value is either passed by 'MealTableViewController' in  prepare(for:sender:)'
+    /* This value is either passed by 'AddRecipeViewController' in  prepare(for:sender:)'
         or constructed as part of adding a new meal
     */
     var recipe: Recipe?
@@ -37,6 +37,16 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recipeNameTextField.delegate = self
+        
+        //Set up views if editing an exising Recipe
+        if let recipe = recipe{
+            navigationItem.title = recipe.name
+            recipeNameTextField.text = recipe.name
+            recipePhoto.image = recipe.photo
+            detailLabel.text = recipe.length
+            recipeInstructionsField.text = recipe.instructions
+            
+        }
         
         //Enable the Save button only if the text fields have valid names
         updateSaveButtonState()
@@ -117,7 +127,18 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     //MARK: Navigation
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        //Depending on style of presentation(modal or push presentation), this view controler needs to be dismissed in two different ways
+        let isPresentingInAddRecipeMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddRecipeMode{
+            dismiss(animated: true, completion: nil)
+        }else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }else{
+            fatalError("The AddRecipeViewController is not inside a navigation control")
+        }
+        
+        
     }
     
     
