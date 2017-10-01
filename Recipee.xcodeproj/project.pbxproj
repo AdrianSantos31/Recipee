@@ -19,6 +19,8 @@
 		3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE581F81001500F5A5B5 /* Recipe.swift */; };
 		3C51CE5D1F8108E600F5A5B5 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */; };
 		3C51CE5F1F810AFB00F5A5B5 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */; };
+		8860FABDE87B916058062EFF /* Pods_Recipee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A25E2D2E59EF57FFA5DA7D /* Pods_Recipee.framework */; };
+		9BDEE0794E5D12511D77A16F /* Pods_RecipeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC2AA065E6685DD41A559D /* Pods_RecipeeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07FC2AA065E6685DD41A559D /* Pods_RecipeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A050A38068F7F84377445CB /* Pods-Recipee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.debug.xcconfig"; sourceTree = "<group>"; };
+		16D0ECD1BC8395F15DF481E7 /* Pods-RecipeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C51CE2B1F80DA3A00F5A5B5 /* Recipee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C51CE2E1F80DA3B00F5A5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C51CE301F80DA3B00F5A5B5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +53,10 @@
 		3C51CE581F81001500F5A5B5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		3CAD02B51F819354004343BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E9217756235EB51218EAE6F /* Pods-Recipee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.release.xcconfig"; sourceTree = "<group>"; };
+		78A25E2D2E59EF57FFA5DA7D /* Pods_Recipee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97FB115BB425BFF7ADDE6E72 /* Pods-RecipeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8860FABDE87B916058062EFF /* Pods_Recipee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDEE0794E5D12511D77A16F /* Pods_RecipeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,8 @@
 				3C51CE2D1F80DA3B00F5A5B5 /* Recipee */,
 				3C51CE441F80DA3C00F5A5B5 /* RecipeeTests */,
 				3C51CE2C1F80DA3A00F5A5B5 /* Products */,
+				DEA56A43B177C1B81B129F3C /* Pods */,
+				3D6B9FF10501F2D7813FA3CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +114,7 @@
 				3C51CE371F80DA3C00F5A5B5 /* Assets.xcassets */,
 				3C51CE391F80DA3C00F5A5B5 /* LaunchScreen.storyboard */,
 				3C51CE3C1F80DA3C00F5A5B5 /* Info.plist */,
+				3CAD02B51F819354004343BA /* GoogleService-Info.plist */,
 			);
 			path = Recipee;
 			sourceTree = "<group>";
@@ -114,6 +128,26 @@
 			path = RecipeeTests;
 			sourceTree = "<group>";
 		};
+		3D6B9FF10501F2D7813FA3CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A25E2D2E59EF57FFA5DA7D /* Pods_Recipee.framework */,
+				07FC2AA065E6685DD41A559D /* Pods_RecipeeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEA56A43B177C1B81B129F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A050A38068F7F84377445CB /* Pods-Recipee.debug.xcconfig */,
+				3E9217756235EB51218EAE6F /* Pods-Recipee.release.xcconfig */,
+				97FB115BB425BFF7ADDE6E72 /* Pods-RecipeeTests.debug.xcconfig */,
+				16D0ECD1BC8395F15DF481E7 /* Pods-RecipeeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C51CE4A1F80DA3C00F5A5B5 /* Build configuration list for PBXNativeTarget "Recipee" */;
 			buildPhases = (
+				C083DF1B7451B5C3A3832405 /* [CP] Check Pods Manifest.lock */,
 				3C51CE271F80DA3A00F5A5B5 /* Sources */,
 				3C51CE281F80DA3A00F5A5B5 /* Frameworks */,
 				3C51CE291F80DA3A00F5A5B5 /* Resources */,
+				7A27D6A6CEC63EBCEC1D7B00 /* [CP] Embed Pods Frameworks */,
+				5A32DC2E4F20A118B1B6A994 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C51CE4D1F80DA3C00F5A5B5 /* Build configuration list for PBXNativeTarget "RecipeeTests" */;
 			buildPhases = (
+				179119AA2EBB6D7669616B4E /* [CP] Check Pods Manifest.lock */,
 				3C51CE3D1F80DA3C00F5A5B5 /* Sources */,
 				3C51CE3E1F80DA3C00F5A5B5 /* Frameworks */,
 				3C51CE3F1F80DA3C00F5A5B5 /* Resources */,
+				55233A9F2F88DA273CFF7E0D /* [CP] Embed Pods Frameworks */,
+				0CA7BDC8AFE38236DE89157F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +255,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CA7BDC8AFE38236DE89157F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		179119AA2EBB6D7669616B4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipeeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55233A9F2F88DA273CFF7E0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A32DC2E4F20A118B1B6A994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recipee/Pods-Recipee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A27D6A6CEC63EBCEC1D7B00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recipee/Pods-Recipee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C083DF1B7451B5C3A3832405 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recipee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C51CE271F80DA3A00F5A5B5 /* Sources */ = {
@@ -379,6 +518,7 @@
 		};
 		3C51CE4B1F80DA3C00F5A5B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A050A38068F7F84377445CB /* Pods-Recipee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N64P2T9UQ6;
@@ -393,6 +533,7 @@
 		};
 		3C51CE4C1F80DA3C00F5A5B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9217756235EB51218EAE6F /* Pods-Recipee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N64P2T9UQ6;
@@ -407,6 +548,7 @@
 		};
 		3C51CE4E1F80DA3C00F5A5B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FB115BB425BFF7ADDE6E72 /* Pods-RecipeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -423,6 +565,7 @@
 		};
 		3C51CE4F1F80DA3C00F5A5B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D0ECD1BC8395F15DF481E7 /* Pods-RecipeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
