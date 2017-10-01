@@ -14,6 +14,9 @@
 		3C51CE381F80DA3C00F5A5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C51CE371F80DA3C00F5A5B5 /* Assets.xcassets */; };
 		3C51CE3B1F80DA3C00F5A5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C51CE391F80DA3C00F5A5B5 /* LaunchScreen.storyboard */; };
 		3C51CE461F80DA3C00F5A5B5 /* RecipeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE451F80DA3C00F5A5B5 /* RecipeeTests.swift */; };
+		3C51CE551F80EA7000F5A5B5 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE541F80EA7000F5A5B5 /* AddRecipeViewController.swift */; };
+		3C51CE571F80F6B400F5A5B5 /* CookingTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE561F80F6B400F5A5B5 /* CookingTimePickerViewController.swift */; };
+		3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE581F81001500F5A5B5 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		3C51CE411F80DA3C00F5A5B5 /* RecipeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C51CE451F80DA3C00F5A5B5 /* RecipeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeeTests.swift; sourceTree = "<group>"; };
 		3C51CE471F80DA3C00F5A5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C51CE541F80EA7000F5A5B5 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		3C51CE561F80F6B400F5A5B5 /* CookingTimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookingTimePickerViewController.swift; sourceTree = "<group>"; };
+		3C51CE581F81001500F5A5B5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				3C51CE301F80DA3B00F5A5B5 /* FirstViewController.swift */,
 				3C51CE321F80DA3B00F5A5B5 /* SecondViewController.swift */,
 				3C51CE341F80DA3B00F5A5B5 /* Main.storyboard */,
+				3C51CE561F80F6B400F5A5B5 /* CookingTimePickerViewController.swift */,
+				3C51CE581F81001500F5A5B5 /* Recipe.swift */,
+				3C51CE541F80EA7000F5A5B5 /* AddRecipeViewController.swift */,
 				3C51CE371F80DA3C00F5A5B5 /* Assets.xcassets */,
 				3C51CE391F80DA3C00F5A5B5 /* LaunchScreen.storyboard */,
 				3C51CE3C1F80DA3C00F5A5B5 /* Info.plist */,
@@ -204,7 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C51CE551F80EA7000F5A5B5 /* AddRecipeViewController.swift in Sources */,
+				3C51CE571F80F6B400F5A5B5 /* CookingTimePickerViewController.swift in Sources */,
 				3C51CE331F80DA3B00F5A5B5 /* SecondViewController.swift in Sources */,
+				3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */,
 				3C51CE2F1F80DA3B00F5A5B5 /* AppDelegate.swift in Sources */,
 				3C51CE311F80DA3B00F5A5B5 /* FirstViewController.swift in Sources */,
 			);
@@ -416,6 +428,7 @@
 				3C51CE4C1F80DA3C00F5A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C51CE4D1F80DA3C00F5A5B5 /* Build configuration list for PBXNativeTarget "RecipeeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				3C51CE4F1F80DA3C00F5A5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
