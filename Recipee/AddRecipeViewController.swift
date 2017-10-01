@@ -37,7 +37,9 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recipeNameTextField.delegate = self
-        self.recipeInstructionsField.delegate = self as? UITextViewDelegate
+        
+        //Enable the Save button only if the text fields have valid names
+        updateSaveButtonState()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +61,14 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //Disable the Save button while editing
+        saveButton.isEnabled = false
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-  
+        updateSaveButtonState()
+        navigationItem.title = recipeNameTextField.text
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -107,6 +115,13 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     
     
     //MARK: Navigation
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     //This method lets you configure a view controller before it's presented
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickCookingTime",
@@ -133,6 +148,12 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         
     }
     
+    //MARK: Private methods
+    private func updateSaveButtonState(){
+        //Disable the Save button if the text field is empty
+        let text = recipeNameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
 
 
     

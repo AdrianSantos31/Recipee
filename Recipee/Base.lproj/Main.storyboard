@@ -108,6 +108,7 @@
                                     <outlet property="cookingTimeLabel" destination="x21-5E-Ilg" id="d5W-ec-82W"/>
                                     <outlet property="recipeNameLabel" destination="fLA-h1-EZu" id="CAp-5j-gQK"/>
                                     <outlet property="recipePicture" destination="4pk-Ou-jo2" id="dDz-ja-Xaa"/>
+                                    <segue destination="C76-FX-0pO" kind="show" identifier="ShowDetail" id="m6E-6V-O0U"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -126,7 +127,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1EK-gt-hoh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="353.9730134932534"/>
+            <point key="canvasLocation" x="1561" y="354"/>
         </scene>
         <!--New Recipe-->
         <scene sceneID="oKq-Cz-NZd">
@@ -230,7 +231,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -246,7 +247,7 @@
                     <navigationItem key="navigationItem" title="New Recipe" id="fqZ-PC-5J8">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="lhH-1X-w1g">
                             <connections>
-                                <segue destination="ipw-fo-hvH" kind="unwind" unwindAction="cancelToSecondViewController:" id="ugV-nV-xMh"/>
+                                <action selector="cancel:" destination="C76-FX-0pO" id="pxD-Us-vVP"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gaX-pj-QD1">
@@ -344,11 +345,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6f-pV-FFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602" y="-142"/>
+            <point key="canvasLocation" x="2479" y="-321"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m6E-6V-O0U"/>
+    </inferredMetricsTieBreakers>
 </document>
