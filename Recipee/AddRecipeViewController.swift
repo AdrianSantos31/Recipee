@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -17,6 +18,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     @IBOutlet weak var recipePhoto: UIImageView!
     @IBOutlet weak var recipeInstructionsField: UITextView!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
     var cookTime: String = "Less than 15 minutes"{
@@ -25,6 +27,10 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         }
     }
     
+    /* This value is either passed by 'MealTableViewController' in  prepare(for:sender:)'
+        or constructed as part of adding a new meal
+    */
+    var recipe: Recipe?
     
 
     
@@ -44,15 +50,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         self.view.endEditing(true)
     }
     
-    //MARK: SEGUE
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PickCookingTime",
-            let recipePickerViewController = segue.destination as? AddRecipeViewController{
-            recipePickerViewController.cookTime = cookTime
-        }
-    }
-    
-    
+
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //Hide the Keyboard
@@ -62,8 +60,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        recipeNameTextField.text = recipeNameTextField.text
-        recipeInstructionsField.text = recipeInstructionsField.text
+  
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -107,6 +104,35 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         
         
     }
+    
+    
+    //MARK: Navigation
+    //This method lets you configure a view controller before it's presented
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PickCookingTime",
+            let recipePickerViewController = segue.destination as? AddRecipeViewController{
+            recipePickerViewController.cookTime = cookTime
+        }
+        
+        super.prepare(for: segue, sender : sender)
+        
+        //Configure the destination view controller only when the save button is pressed
+        guard let button = sender as? UIBarButtonItem, button === saveButton else{
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let photo = recipePhoto.image
+        let name = recipeNameTextField.text ?? ""
+        let length = detailLabel.text ?? ""
+        let instructions = recipeInstructionsField.text ?? ""
+        
+        //Set the recipe to be passed to AddRecipeViewController after the unwind segue
+        recipe = Recipe(photo: photo, name: name, length: length, instructions: instructions)
+        
+        
+    }
+    
 
 
     

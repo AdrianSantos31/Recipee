@@ -119,7 +119,7 @@
                     <navigationItem key="navigationItem" title="Recipes" id="Okt-yQ-aSR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qdf-sB-732">
                             <connections>
-                                <segue destination="ufR-B4-1dZ" kind="presentation" id="MqL-Nn-TJe"/>
+                                <segue destination="ufR-B4-1dZ" kind="show" identifier="AddItem" id="MqL-Nn-TJe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="1644" y="353.9730134932534"/>
         </scene>
-        <!--Add Recipe-->
+        <!--New Recipe-->
         <scene sceneID="oKq-Cz-NZd">
             <objects>
                 <tableViewController id="C76-FX-0pO" customClass="AddRecipeViewController" customModule="Recipee" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -230,7 +230,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -243,15 +243,15 @@
                             <outlet property="delegate" destination="C76-FX-0pO" id="ogi-ab-9Y4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Recipe" id="fqZ-PC-5J8">
+                    <navigationItem key="navigationItem" title="New Recipe" id="fqZ-PC-5J8">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="lhH-1X-w1g">
                             <connections>
                                 <segue destination="ipw-fo-hvH" kind="unwind" unwindAction="cancelToSecondViewController:" id="ugV-nV-xMh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="gaX-pj-QD1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gaX-pj-QD1">
                             <connections>
-                                <segue destination="ipw-fo-hvH" kind="unwind" unwindAction="saveRecipeDetail:" id="Kdr-QM-GGa"/>
+                                <segue destination="ipw-fo-hvH" kind="unwind" unwindAction="unwindToRecipeListWithSender:" id="9l4-vw-wWF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -260,6 +260,7 @@
                         <outlet property="recipeInstructionsField" destination="bjy-Xo-n4S" id="dbQ-bl-kdk"/>
                         <outlet property="recipeNameTextField" destination="l3f-me-7IZ" id="7g5-xg-VH1"/>
                         <outlet property="recipePhoto" destination="mVE-MW-AP5" id="6nj-qM-WJA"/>
+                        <outlet property="saveButton" destination="gaX-pj-QD1" id="PaL-zU-f6k"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwI-ml-Hov" userLabel="First Responder" sceneMemberID="firstResponder"/>

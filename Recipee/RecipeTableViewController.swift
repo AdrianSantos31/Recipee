@@ -127,8 +127,18 @@ class RecipeTableViewController: UITableViewController {
         recipes += [recipe1, recipe2, recipe3]
     }
     
+    //MARK: -Actions
+    @IBAction func unwindToRecipeList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? AddRecipeViewController, let recipe = sourceViewController.recipe{
+            let newIndexPath = IndexPath(row: recipes.count, section: 0)
+            recipes.append(recipe)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
+    
 }
-
+/*
 extension RecipeTableViewController{
     
     @IBAction func cancelToSecondViewController(_ segue: UIStoryboardSegue) {
@@ -138,3 +148,4 @@ extension RecipeTableViewController{
     }
 
 }
+ */
