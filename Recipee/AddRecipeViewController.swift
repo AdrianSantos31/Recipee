@@ -34,6 +34,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recipeNameTextField.delegate = self
+        self.recipeInstructionsField.delegate = self as? UITextViewDelegate
         
         //Set up views if editing an exising Recipe
         if let recipe = recipe{
@@ -68,7 +69,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //Hide the Keyboard
-        textField.resignFirstResponder()
+        recipeNameTextField.resignFirstResponder()
         return true
     }
     
