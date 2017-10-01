@@ -1,0 +1,6 @@
+framework module Pods_Recipee {
+  umbrella header "Pods-Recipee-umbrella.h"
+
+  export *
+  module * { export * }
+}

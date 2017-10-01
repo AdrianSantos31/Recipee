@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12A4987178267596176B8779 /* Pods_Recipee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E87BFB3AF769CF7C20BC522 /* Pods_Recipee.framework */; };
 		3C51CE2F1F80DA3B00F5A5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE2E1F80DA3B00F5A5B5 /* AppDelegate.swift */; };
 		3C51CE311F80DA3B00F5A5B5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE301F80DA3B00F5A5B5 /* FirstViewController.swift */; };
 		3C51CE331F80DA3B00F5A5B5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE321F80DA3B00F5A5B5 /* SecondViewController.swift */; };
@@ -19,6 +20,7 @@
 		3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE581F81001500F5A5B5 /* Recipe.swift */; };
 		3C51CE5D1F8108E600F5A5B5 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */; };
 		3C51CE5F1F810AFB00F5A5B5 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */; };
+		54003AC7E93A1B3B862C5418 /* Pods_RecipeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AFF746260AF54011682529 /* Pods_RecipeeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F66FDA5F5994C4E3E953226 /* Pods-Recipee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.debug.xcconfig"; sourceTree = "<group>"; };
+		2B51674721784050DC3321F1 /* Pods-RecipeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2CD16E540A02A62258242D6D /* Pods-Recipee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.release.xcconfig"; sourceTree = "<group>"; };
 		3C51CE2B1F80DA3A00F5A5B5 /* Recipee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C51CE2E1F80DA3B00F5A5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C51CE301F80DA3B00F5A5B5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		3CAD02B51F819354004343BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70AFF746260AF54011682529 /* Pods_RecipeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E87BFB3AF769CF7C20BC522 /* Pods_Recipee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAB99E1A46E75A66BFEDFDC /* Pods-RecipeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeeTests/Pods-RecipeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A4987178267596176B8779 /* Pods_Recipee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54003AC7E93A1B3B862C5418 /* Pods_RecipeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +85,8 @@
 				3C51CE2D1F80DA3B00F5A5B5 /* Recipee */,
 				3C51CE441F80DA3C00F5A5B5 /* RecipeeTests */,
 				3C51CE2C1F80DA3A00F5A5B5 /* Products */,
+				CB79C8253BE8C0A91BBAF0C4 /* Pods */,
+				F79EC0E39EF67DC587FDDFC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +126,26 @@
 				3C51CE471F80DA3C00F5A5B5 /* Info.plist */,
 			);
 			path = RecipeeTests;
+			sourceTree = "<group>";
+		};
+		CB79C8253BE8C0A91BBAF0C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F66FDA5F5994C4E3E953226 /* Pods-Recipee.debug.xcconfig */,
+				2CD16E540A02A62258242D6D /* Pods-Recipee.release.xcconfig */,
+				DEAB99E1A46E75A66BFEDFDC /* Pods-RecipeeTests.debug.xcconfig */,
+				2B51674721784050DC3321F1 /* Pods-RecipeeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F79EC0E39EF67DC587FDDFC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E87BFB3AF769CF7C20BC522 /* Pods_Recipee.framework */,
+				70AFF746260AF54011682529 /* Pods_RecipeeTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +518,7 @@
 		};
 		3C51CE4B1F80DA3C00F5A5B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F66FDA5F5994C4E3E953226 /* Pods-Recipee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N64P2T9UQ6;
@@ -500,6 +533,7 @@
 		};
 		3C51CE4C1F80DA3C00F5A5B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD16E540A02A62258242D6D /* Pods-Recipee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N64P2T9UQ6;
@@ -514,6 +548,7 @@
 		};
 		3C51CE4E1F80DA3C00F5A5B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEAB99E1A46E75A66BFEDFDC /* Pods-RecipeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +565,7 @@
 		};
 		3C51CE4F1F80DA3C00F5A5B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B51674721784050DC3321F1 /* Pods-RecipeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
