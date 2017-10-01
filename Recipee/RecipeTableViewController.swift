@@ -15,12 +15,9 @@ class RecipeTableViewController: UITableViewController {
     
     var recipes = [Recipe]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,6 +54,7 @@ class RecipeTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RecipeTableViewCell else{
             fatalError("The dequeued cell is not an instance of RecipeTableView Cell")
         }
+        
         //Fetches the appropriate recipe for the data source layout
         let recipe = recipes[indexPath.row]
     
@@ -69,7 +67,7 @@ class RecipeTableViewController: UITableViewController {
     }
  
 
-    
+
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -90,6 +88,7 @@ class RecipeTableViewController: UITableViewController {
         }    
     }
 
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -123,7 +122,7 @@ class RecipeTableViewController: UITableViewController {
                     fatalError("Unexpected desination: \(segue.destination)")
                     }
                 guard let selectedRecipeCell = sender as? RecipeTableViewCell else{
-                        fatalError("Unexpected sender: \(sender)")
+                        fatalError("Unexpected sender: \(sender)")//Expected Error
                     }
                     
                 guard let indexPath = tableView.indexPath(for: selectedRecipeCell) else{
@@ -135,11 +134,35 @@ class RecipeTableViewController: UITableViewController {
             
             
             default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier))")
+                fatalError("Unexpected Segue Identifier; \(segue.identifier))")//Expected Error
         }
     }
     
+    //MARK: -Actions
     
+    @IBAction func unwindToRecipeList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? AddRecipeViewController, let recipe = sourceViewController.recipe{
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                
+                //Update an existing recipe
+                recipes[selectedIndexPath.row] = recipe
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+                
+            }else{
+                //Add a new recipe
+                let newIndexPath = IndexPath(row: recipes.count, section: 0)
+                
+                recipes.append(recipe)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+                
+            }
+            //Save the recipes
+            saveRecipes()
+        }
+    }
+    
+    //MARK: - Private Actions
     private func loadSampleRecipes(){
         let photo1 = UIImage(named: "meal1")
         let photo2 = UIImage(named: "meal2")
@@ -160,30 +183,7 @@ class RecipeTableViewController: UITableViewController {
         recipes += [recipe1, recipe2, recipe3]
     }
     
-    //MARK: -Actions
-    @IBAction func unwindToRecipeList(sender: UIStoryboardSegue){
-        if let sourceViewController = sender.source as? AddRecipeViewController, let recipe = sourceViewController.recipe{
-            
-            if let selectedIndexPath = tableView.indexPathForSelectedRow{
-                
-                //MARK: FIX
-                //Update an existing recipe
-                recipes[selectedIndexPath.row] = recipe
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-                
-            }else{
-                
-                //Add a new recipe
-                let newIndexPath = IndexPath(row: recipes.count, section: 0)
-                recipes.append(recipe)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-                
-            }
-            //Save the recipes
-            saveRecipes()
-            
-        }
-    }
+
     
     private func saveRecipes(){
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(recipes, toFile: Recipe.ArchiveURL.path)
@@ -195,9 +195,7 @@ class RecipeTableViewController: UITableViewController {
     }
     
     private func loadRecipes() -> [Recipe]?{
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Recipe.ArchiveURL.path) as? Recipe
-        
-        
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Recipe.ArchiveURL.path) as? [Recipe]
     }
     
     

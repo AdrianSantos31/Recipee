@@ -16,6 +16,19 @@ class Recipe: NSObject, NSCoding {
     var length: String
     var instructions: String
     
+    //MARK: Archiving Paths
+    static var DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("recipes")
+    
+    //MARK: Types
+    struct PropertyKey{
+        static let photo = "photo"
+        static let name = "name"
+        static let length = "length"
+        static let instructions = "instructions"
+    }
+    
+    
     init?(photo: UIImage?, name: String, length: String, instructions: String){
         //Initialization should fail if there is no name, length nor instructions
         /*
@@ -44,18 +57,7 @@ class Recipe: NSObject, NSCoding {
         
     }
     
-    //MARK: Archiving Paths
-    static var DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendPathComponent("recipes")
-    
-    //MARK: Types
-    struct PropertyKey{
-        static let photo = "photo"
-        static let name = "name"
-        static let length = "length"
-        static let instructions = "instructions"
-    }
-    
+
     //MARK: NSCoding
     func encode(with aCoder: NSCoder) {
         aCoder.encode(photo, forKey: PropertyKey.photo)

@@ -11,13 +11,17 @@ import os.log
 
 class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    
     // MARK: Properties
-    
     @IBOutlet weak var recipeNameTextField: UITextField!
     @IBOutlet weak var recipePhoto: UIImageView!
     @IBOutlet weak var recipeInstructionsField: UITextView!
     @IBOutlet weak var detailLabel: UILabel!
+    
+    /* 
+        This value is either passed by 'AddRecipeViewController' in  'prepare(for:sender:)'
+        or constructed as part of adding a new meal
+     */
+    var recipe: Recipe?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
@@ -26,13 +30,6 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
             detailLabel.text = cookTime
         }
     }
-    
-    /* This value is either passed by 'AddRecipeViewController' in  prepare(for:sender:)'
-        or constructed as part of adding a new meal
-    */
-    var recipe: Recipe?
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,18 +54,11 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         // Dispose of any resources that can be recreated.
     }
     
+
+    //MARK: UITextFieldDelegate
     //Hide the keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-
-    //MARK: UITextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //Hide the Keyboard
-        recipeNameTextField.resignFirstResponder()
-        recipeInstructionsField.resignFirstResponder()
-        return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -76,6 +66,13 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         saveButton.isEnabled = false
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Hide the Keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
         navigationItem.title = recipeNameTextField.text
@@ -83,6 +80,7 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
     
     //MARK: UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        //Dismiss the picker if the user canceled
         dismiss(animated: true, completion: nil)
     }
     
@@ -132,16 +130,14 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         
         if isPresentingInAddRecipeMode{
             dismiss(animated: true, completion: nil)
-        }else if let owningNavigationController = navigationController{
+        }
+        else if let owningNavigationController = navigationController{
             owningNavigationController.popViewController(animated: true)
-        }else{
+        }
+        else{
             fatalError("The AddRecipeViewController is not inside a navigation control")
         }
-        
-        
     }
-    
-    
     
     //This method lets you configure a view controller before it's presented
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -165,8 +161,6 @@ class AddRecipeViewController: UITableViewController, UITextFieldDelegate, UIIma
         
         //Set the recipe to be passed to AddRecipeViewController after the unwind segue
         recipe = Recipe(photo: photo, name: name, length: length, instructions: instructions)
-        
-        
     }
     
     //MARK: Private methods
