@@ -7,9 +7,11 @@ target 'Recipee' do
 
   # Pods for Recipee
 
-  target 'RecipeeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'KeychainSwift'
+
+
 
 end
