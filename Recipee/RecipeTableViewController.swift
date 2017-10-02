@@ -9,12 +9,16 @@
 import UIKit
 import os.log
 
-class RecipeTableViewController: UITableViewController {
+class RecipeTableViewController: UITableViewController{
 
     //MARK: Properties
     
     var recipes = [Recipe]()
-    
+    /*
+    @IBOutlet weak var recipeSearch: UISearchBar!
+    var filteredData = [String]()
+    var isSearching = false
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +33,9 @@ class RecipeTableViewController: UITableViewController {
         }else{
             loadSampleRecipes()
         }
+        
+        //recipeSearch.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +52,10 @@ class RecipeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        /*
+        if isSearching{
+            return filteredData.count
+        }*/
         return recipes.count
     }
 
@@ -57,7 +68,15 @@ class RecipeTableViewController: UITableViewController {
         
         //Fetches the appropriate recipe for the data source layout
         let recipe = recipes[indexPath.row]
-    
+        
+       /* let text: String!
+        
+        if isSearching{
+            text = filteredData[indexPath.row]
+        }else{
+             text = recipe.name
+        }*/
+        
         // Configure the cell...
         cell.recipePicture.image = recipe.photo
         cell.recipeNameLabel.text = recipe.name
@@ -198,6 +217,27 @@ class RecipeTableViewController: UITableViewController {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Recipe.ArchiveURL.path) as? [Recipe]
     }
     
+    //MARK: Custom Actions
+        /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        //Fetches the appropriate recipe for the data source layout
+        var recipe: Recipe?
+        var test
+        
+        if let recipe = recipe{test = recipe.name}
+        
+        if recipeSearch.text == nil || recipeSearch.text == ""{
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            tableView.reloadData()
+        }else{
+            isSearching = true
+            filteredData = recipe.name.filter({$0 == recipeSearch.text})
+            tableView.reloadData()
+        }
+    }
+     */
     
 }
 /*
