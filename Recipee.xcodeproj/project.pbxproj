@@ -19,6 +19,7 @@
 		3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE581F81001500F5A5B5 /* Recipe.swift */; };
 		3C51CE5D1F8108E600F5A5B5 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */; };
 		3C51CE5F1F810AFB00F5A5B5 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */; };
+		3CD832D41F81FEC00090221E /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD832D31F81FEC00090221E /* LaunchScreenViewController.swift */; };
 		9392DCD32223AFAF6B564BFB /* Pods_Recipee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED15E72B28BE2AABFB9BB56 /* Pods_Recipee.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		3C51CE5C1F8108E600F5A5B5 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		3C51CE5E1F810AFB00F5A5B5 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		3CAD02B61F81C327004343BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3CD832D31F81FEC00090221E /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		CFF3DCA534CC260FFA784DAC /* Pods-Recipee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB0B37FF28C2D342A973909 /* Pods-Recipee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipee/Pods-Recipee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				3C51CE541F80EA7000F5A5B5 /* AddRecipeViewController.swift */,
 				3C51CE371F80DA3C00F5A5B5 /* Assets.xcassets */,
 				3C51CE391F80DA3C00F5A5B5 /* LaunchScreen.storyboard */,
+				3CD832D31F81FEC00090221E /* LaunchScreenViewController.swift */,
 				3C51CE3C1F80DA3C00F5A5B5 /* Info.plist */,
 				3CAD02B61F81C327004343BA /* GoogleService-Info.plist */,
 			);
@@ -319,6 +322,7 @@
 				3C51CE5D1F8108E600F5A5B5 /* RecipeTableViewCell.swift in Sources */,
 				3C51CE591F81001500F5A5B5 /* Recipe.swift in Sources */,
 				3C51CE2F1F80DA3B00F5A5B5 /* AppDelegate.swift in Sources */,
+				3CD832D41F81FEC00090221E /* LaunchScreenViewController.swift in Sources */,
 				3C51CE311F80DA3B00F5A5B5 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
